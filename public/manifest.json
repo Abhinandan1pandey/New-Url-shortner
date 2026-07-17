@@ -1,0 +1,16 @@
+{
+  "short_name": "Url Shortner",
+  "name": "Url Shortner System",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "display": "standalone",
+  "orientation": "portrait"
+}

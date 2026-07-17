@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Optimization -->
+    <title>Url Shortner System | Smart URL Shortening</title>
+    <meta name="description" content="Url Shortner System is an advanced URL shortener demonstrating Custom Hash Tables, Separate Chaining, and Dynamic Rehashing. Features detailed SaaS analytics, password protection, and custom alias support." />
+    <meta name="keywords" content="url shortener, dsa, hash table, separate chaining, base62, sha256, dynamic rehashing, database, smart links" />
+    <meta name="author" content="Url Shortner System Team" />
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#060913" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Unregister any previously installed service worker to avoid stale cached assets
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          registrations.forEach(reg => reg.unregister());
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(keys => {
+          keys.forEach(key => caches.delete(key));
+        });
+      }
+    </script>
+    <footer style="text-align:center;padding:10px 0;color:#9CA3AF;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-size:12px;">
+      Made by Abhinandan Pandey — © 2026 Abhinandan Pandey. All Rights Reserved.
+    </footer>
+    <script>
+      (function(){
+        const setLogo = () => {
+          const a = document.querySelector('header a');
+          if(!a) return false;
+          a.innerHTML = '<div class="p-2 rounded-xl bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-md shadow-brand-purple/20 group-hover:rotate-6 transition-transform'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2 lucide-link-2 w-5 h-5" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line x1="8" x2="16" y1="12" y2="12"></line></svg></div><span class="font-display font-extrabold text-lg text-white tracking-tight">Url <span class="bg-gradient-to-r from-brand-blue to-brand-pink bg-clip-text text-transparent">Shortner</span></span>';
+          return true;
+        };
+        try{
+          if(!setLogo()){
+            const obs = new MutationObserver(()=>{ if(setLogo()) obs.disconnect(); });
+            obs.observe(document.body, { childList: true, subtree: true });
+            setTimeout(()=>obs.disconnect(), 20000);
+          }
+        }catch(e){console.warn(e)}
+      })();
+    </script>
+  </body>
+</html>
